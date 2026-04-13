@@ -1,0 +1,82 @@
+:root {
+  color-scheme: dark;
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  background: #040812;
+  color: #e7edf7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 92%);
+  pointer-events: none;
+}
+
+.control-button {
+  background: rgba(22, 31, 51, 0.86);
+  border: 1px solid #2a3653;
+  color: #e7edf7;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.control-button:hover {
+  background: rgba(34, 47, 74, 0.96);
+  border-color: #49608e;
+  transform: translateY(-1px);
+}
+
+.reset-button {
+  width: auto;
+  padding: 0 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .control-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .reset-button {
+    padding: 0 8px;
+    font-size: 10px;
+  }
+}
